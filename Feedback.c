@@ -135,12 +135,12 @@ void ProcessChargingPWM(void) {
 	if ( duty_Charger > dutyChargerMax ) {
 		duty_Charger = dutyChargerMax;
 	}
-	if(VSB_reading>=700)//700 means voltage 4.25v
+	if(VSB_reading>=targetVSS_Limit)//4.25V -- when the VSB voltage is higher than 4.55 means charge full
     	{
 		BatteryFull = 1;
 		duty_Charger=0;
     	}
-   	if(VSB_reading<=583)//583 means voltage 3.0v
+   	if(VSB_reading<=BatteryLimits0)//3.55 Volts. (Reading = 150*VBattery), Battery Full
     	{
 		BatteryFull = 0;
     	}
