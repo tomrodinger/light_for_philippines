@@ -48,7 +48,7 @@ static uint16_t const targetVSS [] PROGMEM = {	648, //655,	// Vss = 4 V   (Vss =
 #define BatteryLimits2	508		// 3.1 Volts, Battery Low
 #define BatteryLimits3	493		// 3.0 Volts, Battery Empty
 
-#define VS3Limits0 200	// Current ~ 2A
+#define VS3Limits0 250	// Current ~ 2.5A
 #define VS3Limits1 195	// Close to max current, for hysteresis
 #define VS3Limits2 18	// Limit for reliable MPPT ~0.2A
 #define VS3Limits3 8	// Stop charging
